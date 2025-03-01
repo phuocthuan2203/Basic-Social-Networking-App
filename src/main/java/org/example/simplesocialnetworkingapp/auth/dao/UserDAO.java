@@ -1,6 +1,7 @@
-package org.example.simplesocialnetworkingapp.dao;
+package org.example.simplesocialnetworkingapp.auth.dao;
 
-import org.example.simplesocialnetworkingapp.model.User;
+import org.example.simplesocialnetworkingapp.auth.model.User;
+import org.example.simplesocialnetworkingapp.common.util.DBConnectionUtil;
 
 import java.sql.*;
 

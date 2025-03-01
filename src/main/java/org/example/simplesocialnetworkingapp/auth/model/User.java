@@ -1,4 +1,4 @@
-package org.example.simplesocialnetworkingapp.model;
+package org.example.simplesocialnetworkingapp.auth.model;
 
 public class User {
     private int id;

@@ -1,8 +1,8 @@
-package org.example.simplesocialnetworkingapp;
+package org.example.simplesocialnetworkingapp.auth.service;
 
-import org.example.simplesocialnetworkingapp.dao.UserDAO;
-import org.example.simplesocialnetworkingapp.model.User;
-import org.example.simplesocialnetworkingapp.util.PasswordHasher;
+import org.example.simplesocialnetworkingapp.auth.dao.UserDAO;
+import org.example.simplesocialnetworkingapp.auth.model.User;
+import org.example.simplesocialnetworkingapp.common.util.PasswordHasher;
 
 public class UserAuthImpl implements IUserAuth {
 

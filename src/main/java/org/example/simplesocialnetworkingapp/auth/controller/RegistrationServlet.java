@@ -1,8 +1,8 @@
-package org.example.simplesocialnetworkingapp.controller;
+package org.example.simplesocialnetworkingapp.auth.controller;
 
-import org.example.simplesocialnetworkingapp.IUserAuth;
-import org.example.simplesocialnetworkingapp.UserAuthImpl;
-import org.example.simplesocialnetworkingapp.dao.UserDAO;
+import org.example.simplesocialnetworkingapp.auth.service.IUserAuth;
+import org.example.simplesocialnetworkingapp.auth.service.UserAuthImpl;
+import org.example.simplesocialnetworkingapp.auth.dao.UserDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;

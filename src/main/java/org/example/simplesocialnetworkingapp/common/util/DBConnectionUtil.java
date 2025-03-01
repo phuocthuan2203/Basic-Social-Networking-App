@@ -1,4 +1,4 @@
-package org.example.simplesocialnetworkingapp.dao;
+package org.example.simplesocialnetworkingapp.common.util;
 
 import java.io.IOException;
 import java.io.InputStream;
