@@ -2,7 +2,7 @@ package org.example.simplesocialnetworkingapp.auth.controller;
 
 import org.example.simplesocialnetworkingapp.auth.service.IUserAuth;
 import org.example.simplesocialnetworkingapp.auth.service.UserAuthImpl;
-import org.example.simplesocialnetworkingapp.auth.model.User;
+import org.example.simplesocialnetworkingapp.domain.model.User;
 import org.example.simplesocialnetworkingapp.auth.dao.UserDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        req.getRequestDispatcher("login.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/views/auth/login.jsp").forward(req, resp);
     }
 
     @Override
@@ -34,10 +34,10 @@ public class LoginServlet extends HttpServlet {
         if (user != null) {
             HttpSession session = req.getSession();
             session.setAttribute("loggedInUser", user);
-            resp.sendRedirect("home.jsp"); // Redirect to a home page after login
+            resp.sendRedirect(req.getContextPath() + "/manageOwnPosts"); // Redirect to the servlet that handles displaying posts
         } else {
             req.setAttribute("error", "Invalid username or password.");
-            req.getRequestDispatcher("login.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/views/auth/login.jsp").forward(req, resp);
         }
     }
 }

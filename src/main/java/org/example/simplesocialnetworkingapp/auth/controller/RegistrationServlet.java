@@ -21,7 +21,7 @@ public class RegistrationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        req.getRequestDispatcher("register.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/views/auth/register.jsp").forward(req, resp);
     }
 
     @Override
@@ -32,10 +32,10 @@ public class RegistrationServlet extends HttpServlet {
         boolean success = userAuth.registerUser(username, password);
         if (success) {
             req.setAttribute("message", "Registration successful. Please log in.");
-            req.getRequestDispatcher("login.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/views/auth/login.jsp").forward(req, resp);
         } else {
             req.setAttribute("error", "Username already taken. Please choose another.");
-            req.getRequestDispatcher("register.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/views/auth/register.jsp").forward(req, resp);
         }
     }
 }
