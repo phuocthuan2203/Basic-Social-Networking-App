@@ -1,6 +1,6 @@
-package org.example.simplesocialnetworkingapp;
+package org.example.simplesocialnetworkingapp.auth.service;
 
-import org.example.simplesocialnetworkingapp.model.User;
+import org.example.simplesocialnetworkingapp.domain.model.User;
 
 public interface IUserAuth {
 

@@ -1,4 +1,4 @@
-package org.example.simplesocialnetworkingapp.util;
+package org.example.simplesocialnetworkingapp.common.util;
 
 import org.mindrot.jbcrypt.BCrypt;
 
